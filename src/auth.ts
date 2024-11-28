@@ -8,5 +8,4 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
 			clientSecret: process.env.AUTH_TWITTER_SECRET,
 		}),
 	],
-	debug: true,
 });
