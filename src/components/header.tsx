@@ -15,7 +15,7 @@ const Header = async () => {
 	}
 
 	const session = await auth();
-	console.log(session?.user);
+	console.log(session);
 
 	return (
 		<header className="w-full h-[6rem] flex justify-between items-center p-6 pb-2">
