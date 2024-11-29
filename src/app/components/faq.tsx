@@ -8,7 +8,7 @@ import {
 
 const Faq = () => {
 	return (
-		<div className="w-full flex justify-between items-center p-6 my-8">
+		<div className="w-full flex justify-between items-center p-8 my-8">
 			<div className="flex flex-col gap-6 w-[30%]">
 				<h3 className="text-5xl font-bold text-white">
 					Any questions?

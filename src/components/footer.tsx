@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
 	return (
-		<footer className="w-full h-32 bg-[#1E262B] flex justify-between items-center p-6">
+		<footer className="w-full h-32 bg-[#1E262B] flex justify-between items-center p-8">
 			<div className="flex gap-8 h-full items-center">
 				<div>
 					<h3 className="text-2xl font-bold text-[#D4B844]">Ownify</h3>

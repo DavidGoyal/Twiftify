@@ -3,7 +3,7 @@ import React from "react";
 
 const Hero = () => {
 	return (
-		<article className="w-full h-[calc(90vh-6rem)] p-6 pt-0">
+		<article className="w-full h-[calc(90vh-6rem)] p-8">
 			<div className="w-full h-full flex justify-center items-center gap-12 bg-[url('/HeroBG.png')] bg-no-repeat bg-cover bg-center rounded-3xl">
 				<Image
 					src={"/Solana.png"}

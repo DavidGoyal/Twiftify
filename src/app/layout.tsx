@@ -4,6 +4,7 @@ import { Montserrat } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
+import WalletAdapterProvider from "@/providers/wallet-adapter-provider";
 
 const geistSans = localFont({
 	src: "./fonts/GeistVF.woff",
@@ -29,13 +30,15 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body
-				className={`${geistSans.variable} ${geistMono.variable} ${montserrat.className} antialiased bg-[#1E1E1E]`}
-			>
-				<Header />
-				{children}
-				<Footer />
-			</body>
+			<WalletAdapterProvider>
+				<body
+					className={`${geistSans.variable} ${geistMono.variable} ${montserrat.className} antialiased bg-[#111314]`}
+				>
+					<Header />
+					{children}
+					<Footer />
+				</body>
+			</WalletAdapterProvider>
 		</html>
 	);
 }

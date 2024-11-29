@@ -3,7 +3,7 @@ import React from "react";
 
 const Capabilites = () => {
 	return (
-		<section className="w-full flex justify-between items-center p-6 mt-12">
+		<section className="w-full flex justify-between items-center p-8 mt-12">
 			<p className="text-white text-6xl font-bold uppercase w-[40%]">
 				Ownify&apos;s Capabilites
 			</p>
