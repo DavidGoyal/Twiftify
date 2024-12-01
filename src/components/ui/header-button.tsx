@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from "react";
 import WalletButton from "./wallet-button";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const HeaderButton = ({
 	isLoggedIn,
@@ -14,6 +15,7 @@ const HeaderButton = ({
 	twittersignOut: () => void;
 }) => {
 	const [open, setOpen] = useState(false);
+	const pathname = usePathname();
 
 	useEffect(() => {
 		document.body.style.overflow = open ? "hidden" : "auto";
@@ -69,7 +71,7 @@ const HeaderButton = ({
 						href={"/"}
 						className="text-white text-2xl"
 						style={{
-							color: window.location.pathname === "/" ? "#D4B844" : "white",
+							color: pathname === "/" ? "#D4B844" : "white",
 						}}
 						onClick={() => setOpen(false)}
 					>
@@ -79,7 +81,7 @@ const HeaderButton = ({
 						href={"/nft"}
 						className="text-white text-2xl"
 						style={{
-							color: window.location.pathname === "/nft" ? "#D4B844" : "white",
+							color: pathname === "/nft" ? "#D4B844" : "white",
 						}}
 						onClick={() => setOpen(false)}
 					>

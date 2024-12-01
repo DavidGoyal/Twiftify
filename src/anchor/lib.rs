@@ -1,6 +1,6 @@
 use anchor_lang::prelude::*;
 
-declare_id!("5ZaqHHJ69BSEy9nVzvvdpPeKR6Zxy7Jp1ez6w2tasEhx");
+declare_id!("AProoUZhgBATtU3nq66FDkwBJFq2JyYnSdvKwqFHxJTZ");
 
 #[program]
 pub mod solana_store {
@@ -63,7 +63,7 @@ pub struct InitializeStoreAccount<'info> {
     #[account(
         init, 
         payer = user, 
-        space = 8 + 1024 // Space for StoreAccount data
+        space = 8 + 2400 // Space for StoreAccount data
     )]
     pub store_account: Account<'info, StoreAccount>,
     #[account(mut)]
