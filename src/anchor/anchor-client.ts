@@ -10,5 +10,5 @@ export const storeAccount = new web3.PublicKey(
 );
 
 export const programConnection = new Connection(
-	"https://devnet.helius-rpc.com/?api-key=6cee280d-6264-4697-8395-d066c1b30ffc"
+	process.env.NEXT_PUBLIC_DEVNET_URL as string
 );
