@@ -8,9 +8,8 @@ export const getXUsername = async (token: string) => {
 				"User-Agent": "v2UserLookupJS",
 			},
 		});
-		const data = await response.json();
-		console.log(data);
-		return data?.username || null;
+		const res = await response.json();
+		return res?.data?.username || null;
 	} catch (error) {
 		console.log(error);
 		return null;
