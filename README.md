@@ -8,7 +8,7 @@ Twiftify is a fully decentralized platform that allows users to link their NFTs 
 
 ## **Program**
 
-The Twiftify program is a custom smart contract on the Solana blockchain. It allows users to link their NFTs with their X (formerly Twitter) profiles.You can see the program deployed on the Solana blockchain [here](https://explorer.solana.com/address/5ZaqHHJ69BSEy9nVzvvdpPeKR6Zxy7Jp1ez6w2tasEhx?cluster=devnet).
+The Twiftify program is a custom smart contract on the Solana blockchain. It allows users to link their NFTs with their X (formerly Twitter) profiles.You can see the program deployed on the Solana blockchain [here](https://explorer.solana.com/address/AProoUZhgBATtU3nq66FDkwBJFq2JyYnSdvKwqFHxJTZ?cluster=devnet).
 
 ## **Features**
 
