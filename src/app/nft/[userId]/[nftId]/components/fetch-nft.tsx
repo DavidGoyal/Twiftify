@@ -62,7 +62,6 @@ const FetchNft = ({
 				});
 
 				const value = await getValue({ id: userId + nftId });
-				console.log(value);
 
 				if (value) {
 					setXUrl(value);
@@ -86,8 +85,8 @@ const FetchNft = ({
 	return loading ? (
 		<>
 			<main className="w-full h-[80vh] flex flex-col lg:flex-row justify-between items-center p-12 px-24 pt-3">
-				<Skeleton className="h-full w-[50%] rounded-2xl bg-gray-200" />
-				<div className="h-full w-[43%] flex flex-col gap-3">
+				<Skeleton className="h-full w-[100%] lg:w-[50%] rounded-2xl bg-gray-200" />
+				<div className="h-full w-[100%] lg:w-[43%] flex flex-col gap-3">
 					<div className="w-full flex flex-col gap-2">
 						<h1 className="text-4xl font-bolg text-white border-b-2 border-[#A6DBFF] w-full py-4">
 							DETAILS
@@ -122,7 +121,7 @@ const FetchNft = ({
 				/>
 				<div className="h-full w-[100%] lg:w-[43%] flex flex-col gap-3">
 					<div className="w-full flex flex-col gap-2">
-						<h1 className="text-4xl font-bolg text-white border-b-2 border-[#A6DBFF] w-full py-4">
+						<h1 className="text-4xl font-bold text-white border-b-2 border-[#A6DBFF] w-full py-4">
 							DETAILS
 						</h1>
 						<div className="flex w-full justify-between items-center">
