@@ -10,13 +10,13 @@ import {
 import { NFTMetadata } from "@/types/types";
 import { AnchorProvider, Program, setProvider } from "@coral-xyz/anchor";
 import { useAnchorWallet } from "@solana/wallet-adapter-react";
-import axios from "axios";
 import { User } from "next-auth";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { toast } from "sonner";
 import idl from "../../../anchor/idl.json";
 import type { SolanaStore } from "../../../anchor/types/anchor-types";
+import needle from "needle";
 
 const NftCard = ({
 	nft,
@@ -43,12 +43,15 @@ const NftCard = ({
 			if (!user) {
 				return toast.error("Login first to link your NFT");
 			}
-			const response = await axios.get("https://api.x.com/2/users/me", {
-				headers: { Authorization: `Bearer ${user?.token}` },
+			const response = await needle("get", "https://api.x.com/2/users/me", {
+				headers: {
+					"User-Agent": "v2UserLookupJS",
+					authorization: `Bearer ${user.token}`,
+				},
 			});
-			console.log(response?.data?.username);
+			console.log(response?.body?.username);
 
-			if (!response?.data?.username) {
+			if (!response?.body?.username) {
 				return toast.error("Internal error, please try again");
 			}
 
@@ -59,7 +62,7 @@ const NftCard = ({
 			const tx = await program.methods
 				.setValue(
 					wallet.publicKey.toString() + nft.publicKey,
-					response?.data?.username
+					response?.body?.username
 				)
 				.accounts({
 					storeAccount: storeAccount,
