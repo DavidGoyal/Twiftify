@@ -11,7 +11,7 @@ import {
 	WhatsappIcon,
 } from "react-share";
 import { Button, Modal } from "antd";
-import { Link as LinkOutlined } from "@phosphor-icons/react";
+import { LinkOutlined } from "@ant-design/icons";
 import { toast } from "sonner";
 
 interface ShareComponentProps {

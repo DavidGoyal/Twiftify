@@ -1,3 +1,5 @@
+"use client";
+
 import { programConnection, storeAccount } from "@/anchor/anchor-client";
 import {
 	Tooltip,
