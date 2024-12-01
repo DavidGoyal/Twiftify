@@ -4,8 +4,8 @@ import React from "react";
 const Capabilites = () => {
 	return (
 		<section className="w-full flex flex-col lg:flex-row justify-between items-center p-8 mt-12 gap-8">
-			<p className="text-white text-6xl font-bold uppercase w-[90%] lg:w-[40%] text-center text-wrap">
-				Twiftify&apos;s Capabilites
+			<p className="text-white text-4xl sm:text-6xl font-bold uppercase w-[90%] lg:w-[40%] text-center text-wrap">
+				Twiftify&apos;s Features
 			</p>
 
 			<div className="flex flex-col gap-4 w-[90%] lg:w-[50%]">

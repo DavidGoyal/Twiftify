@@ -10,7 +10,7 @@ const Faq = () => {
 	return (
 		<div className="w-full flex flex-col lg:flex-row justify-between items-center p-8 my-8 gap-8">
 			<div className="flex flex-col gap-6 w-[90%] lg:w-[30%]">
-				<h3 className="text-5xl font-bold text-white">
+				<h3 className="text-4xl sm:text-6xl font-bold text-white">
 					Any questions?
 					<br /> We got you.
 				</h3>
