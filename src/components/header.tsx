@@ -20,18 +20,17 @@ const Header = async () => {
 	return (
 		<header className="w-full h-[6rem] flex justify-between items-center p-8 pb-2 border-b-[1px] border-[#2a2f34]">
 			<div>
-				<h3 className="text-2xl font-bold text-[#D4B844]">Ownify</h3>
+				<Link href={"/"}>
+					<h3 className="text-2xl font-bold text-[#D4B844]">Ownify</h3>
+				</Link>
 			</div>
 
 			<nav className="flex gap-6">
 				<Link href={"/"} className="text-white">
 					Home
 				</Link>
-				<Link href={"/"} className="text-white">
-					About
-				</Link>
-				<Link href={"/"} className="text-white">
-					Contact
+				<Link href={"/nft"} className="text-white">
+					Nft
 				</Link>
 			</nav>
 

@@ -1,0 +1,121 @@
+{
+	"address": "5ZaqHHJ69BSEy9nVzvvdpPeKR6Zxy7Jp1ez6w2tasEhx",
+	"metadata": {
+		"name": "solana_store",
+		"version": "0.1.0",
+		"spec": "0.1.0",
+		"description": "Created with Anchor"
+	},
+	"instructions": [
+		{
+			"name": "get_value",
+			"discriminator": [88, 79, 40, 100, 21, 74, 119, 125],
+			"accounts": [
+				{
+					"name": "store_account",
+					"writable": true
+				},
+				{
+					"name": "user",
+					"signer": true
+				}
+			],
+			"args": [
+				{
+					"name": "addr",
+					"type": "string"
+				}
+			],
+			"returns": {
+				"option": "string"
+			}
+		},
+		{
+			"name": "initialize",
+			"discriminator": [175, 175, 109, 31, 13, 152, 155, 237],
+			"accounts": [
+				{
+					"name": "store_account",
+					"writable": true,
+					"signer": true
+				},
+				{
+					"name": "user",
+					"writable": true,
+					"signer": true
+				},
+				{
+					"name": "system_program",
+					"address": "11111111111111111111111111111111"
+				}
+			],
+			"args": []
+		},
+		{
+			"name": "set_value",
+			"discriminator": [253, 214, 48, 201, 100, 201, 227, 219],
+			"accounts": [
+				{
+					"name": "store_account",
+					"writable": true
+				},
+				{
+					"name": "user",
+					"signer": true
+				}
+			],
+			"args": [
+				{
+					"name": "addr",
+					"type": "string"
+				},
+				{
+					"name": "value",
+					"type": "string"
+				}
+			]
+		}
+	],
+	"accounts": [
+		{
+			"name": "StoreAccount",
+			"discriminator": [158, 151, 50, 63, 120, 194, 135, 114]
+		}
+	],
+	"types": [
+		{
+			"name": "KeyValue",
+			"type": {
+				"kind": "struct",
+				"fields": [
+					{
+						"name": "key",
+						"type": "string"
+					},
+					{
+						"name": "value",
+						"type": "string"
+					}
+				]
+			}
+		},
+		{
+			"name": "StoreAccount",
+			"type": {
+				"kind": "struct",
+				"fields": [
+					{
+						"name": "values",
+						"type": {
+							"vec": {
+								"defined": {
+									"name": "KeyValue"
+								}
+							}
+						}
+					}
+				]
+			}
+		}
+	]
+}

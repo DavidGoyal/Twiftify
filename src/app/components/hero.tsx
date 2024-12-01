@@ -4,15 +4,15 @@ import React from "react";
 const Hero = () => {
 	return (
 		<article className="w-full h-[calc(90vh-6rem)] p-8">
-			<div className="w-full h-full flex justify-center items-center gap-12 bg-[url('/HeroBG.png')] bg-no-repeat bg-cover bg-center rounded-3xl">
+			<div className="w-full h-full flex flex-col md:flex-row justify-center items-center gap-12 bg-[url('/HeroBG.png')] bg-no-repeat bg-cover bg-center rounded-3xl">
 				<Image
 					src={"/Solana.png"}
 					alt="Solana Coin"
 					width={500}
 					height={500}
-					className="w-[40%]"
+					className="w-[90%] md:w-[40%]"
 				/>
-				<div className="flex flex-col w-[35%]">
+				<div className="flex flex-col w-[90%] md:w-[35%]">
 					<div className="flex flex-col">
 						<h1 className="text-4xl font-bold text-[#D4B844]">Ownify</h1>
 						<h2 className="text-2xl font-bold text-white">

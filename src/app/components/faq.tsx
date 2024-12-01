@@ -8,8 +8,8 @@ import {
 
 const Faq = () => {
 	return (
-		<div className="w-full flex justify-between items-center p-8 my-8">
-			<div className="flex flex-col gap-6 w-[30%]">
+		<div className="w-full flex flex-col lg:flex-row justify-between items-center p-8 my-8 gap-8">
+			<div className="flex flex-col gap-6 w-[90%] lg:w-[30%]">
 				<h3 className="text-5xl font-bold text-white">
 					Any questions?
 					<br /> We got you.
@@ -21,7 +21,11 @@ const Faq = () => {
 					experience is smooth and easy!
 				</p>
 			</div>
-			<Accordion type="single" collapsible className="w-[50%] text-white">
+			<Accordion
+				type="single"
+				collapsible
+				className="w-[90%] lg:w-[50%] text-white"
+			>
 				<AccordionItem value="item-1" className="border-[#A6DBFF]">
 					<AccordionTrigger className="font-semibold">
 						What is Ownify?

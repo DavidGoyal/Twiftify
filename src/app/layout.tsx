@@ -5,6 +5,7 @@ import "./globals.css";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import WalletAdapterProvider from "@/providers/wallet-adapter-provider";
+import { Toaster } from "@/components/ui/sonner";
 
 const geistSans = localFont({
 	src: "./fonts/GeistVF.woff",
@@ -37,6 +38,7 @@ export default function RootLayout({
 					<Header />
 					{children}
 					<Footer />
+					<Toaster position="bottom-right" />
 				</body>
 			</WalletAdapterProvider>
 		</html>

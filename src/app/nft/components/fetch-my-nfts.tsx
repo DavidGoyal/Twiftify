@@ -8,6 +8,7 @@ import { fetchAllDigitalAssetWithTokenByOwner } from "@metaplex-foundation/mpl-t
 import LoadingCard from "./loading-card";
 import NftCard from "./nft-card";
 import { NFTMetadata } from "@/types/types";
+import { User } from "next-auth";
 
 const fetchAllNftsFunction = async ({
 	ownerPublicKey,
@@ -18,6 +19,7 @@ const fetchAllNftsFunction = async ({
 	setLoading: React.Dispatch<React.SetStateAction<boolean>>;
 	setNfts: React.Dispatch<React.SetStateAction<(NFTMetadata | undefined)[]>>;
 }) => {
+	setLoading(true);
 	try {
 		const umi = createUmi(process.env.NEXT_PUBLIC_RPC_URL as string);
 
@@ -52,7 +54,15 @@ const fetchAllNftsFunction = async ({
 	}
 };
 
-const FetchMyNfts = () => {
+const FetchMyNfts = ({
+	user,
+}: {
+	user:
+		| ({
+				token?: string;
+		  } & User)
+		| undefined;
+}) => {
 	const wallet = useWallet();
 	const [loading, setLoading] = useState(true);
 	const [nfts, setNfts] = useState<(NFTMetadata | undefined)[]>([]);
@@ -64,14 +74,18 @@ const FetchMyNfts = () => {
 				setLoading,
 				setNfts,
 			});
-		} else if (!wallet.connecting) {
-			setLoading(false);
 		}
 	}, [wallet]);
 
 	useEffect(() => {
+		if (!wallet.connected || !wallet.publicKey) {
+			setTimeout(() => {
+				setLoading(false);
+			}, 3000);
+			return;
+		}
 		fetchNfts();
-	}, [fetchNfts]);
+	}, [fetchNfts, wallet]);
 
 	if (loading) {
 		return Array.from({ length: 12 }).map((_, index) => (
@@ -79,13 +93,13 @@ const FetchMyNfts = () => {
 		));
 	}
 
-	if (!wallet.connected || !wallet.publicKey) {
+	if ((!wallet.connected || !wallet.publicKey) && !wallet.connecting) {
 		return <p className="text-white">Connect your wallet to view your NFTs</p>;
 	}
 
 	return nfts.length > 0 ? (
 		nfts.map((nft, index) => {
-			if (nft) return <NftCard key={index} nft={nft} />;
+			if (nft) return <NftCard key={index} nft={nft} user={user} />;
 		})
 	) : (
 		<p className="text-white">You have No NFTs 😭.</p>

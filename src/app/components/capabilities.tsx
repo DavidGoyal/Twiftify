@@ -3,12 +3,12 @@ import React from "react";
 
 const Capabilites = () => {
 	return (
-		<section className="w-full flex justify-between items-center p-8 mt-12">
-			<p className="text-white text-6xl font-bold uppercase w-[40%]">
+		<section className="w-full flex flex-col lg:flex-row justify-between items-center p-8 mt-12 gap-8">
+			<p className="text-white text-6xl font-bold uppercase w-[90%] lg:w-[40%] text-center text-wrap">
 				Ownify&apos;s Capabilites
 			</p>
 
-			<div className="flex flex-col gap-4 w-[50%]">
+			<div className="flex flex-col gap-4 w-[90%] lg:w-[50%]">
 				<CapabilitesCard
 					title="Effortless Integration with Your Accounts"
 					icon={
@@ -59,7 +59,7 @@ const CapabilitesCard = ({
 }) => {
 	return (
 		<div
-			className={`flex justify-center gap-2 w-[50%] ${
+			className={`flex justify-center gap-2 w-[100%] sm:w-[50%] ${
 				alignLeft ? "self-start" : "self-end"
 			}`}
 		>
