@@ -46,7 +46,10 @@ const NftCard = ({
 			const response = await axios.get(
 				"https://api.x.com/2/users/me?query=from:twitterdev",
 				{
-					headers: { Authorization: `Bearer ${user?.token}` },
+					headers: {
+						Authorization: `Bearer ${user?.token}`,
+						"User-Agent": "v2UserLookupJS",
+					},
 				}
 			);
 			console.log(response?.data?.username);
