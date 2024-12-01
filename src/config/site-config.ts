@@ -7,7 +7,7 @@ const DESCRIPTION =
 const PREVIEW_IMAGE_URL =
 	"https://res.cloudinary.com/dlu7jj0qk/image/upload/v1733052162/avatar/bkojhvzywub7lvqq7old.png";
 const ALT_TITLE = "Twiftify: Decentralized NFT Sharing Made Seamless";
-const BASE_URL = "https://ownify.vercel.app";
+const BASE_URL = "https://twiftify.twonoobs.tech";
 
 export const siteConfig: Metadata = {
 	title: TITLE,
