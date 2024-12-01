@@ -51,7 +51,7 @@ const FetchNft = ({
 						owner: asset.metadata.header.owner.toString(),
 						metadataURI: asset.metadata.uri,
 					},
-					attributes: jsonMetadata.attributes.map(
+					attributes: jsonMetadata?.attributes?.map(
 						(attribute: { trait_type: string; value: string }) => {
 							return {
 								type: attribute.trait_type,
@@ -138,7 +138,7 @@ const FetchNft = ({
 									href={`https://solscan.io/account/${nft!.details.mint}`}
 									target="_blank"
 								>
-									{nft!.details.mint.slice(0, 5)}
+									{nft?.details?.mint.slice(0, 5)}
 								</a>
 							</div>
 						</div>
@@ -153,10 +153,10 @@ const FetchNft = ({
 								</button>
 								<a
 									className="text-white text-lg hover:underline"
-									href={`https://solscan.io/account/${nft!.details.owner}`}
+									href={`https://solscan.io/account/${nft?.details?.owner}`}
 									target="_blank"
 								>
-									{nft!.details.owner.slice(0, 5)}
+									{nft?.details?.owner.slice(0, 5)}
 								</a>
 							</div>
 						</div>
@@ -164,7 +164,7 @@ const FetchNft = ({
 							<p className="text-white text-lg">Metadata</p>
 							<a
 								className="text-white text-lg hover:underline"
-								href={`${nft!.details.metadataURI}`}
+								href={`${nft?.details?.metadataURI}`}
 								target="_blank"
 							>
 								<svg
@@ -201,10 +201,10 @@ const FetchNft = ({
 
 					<div className="w-full flex flex-col gap-2">
 						<h1 className="text-4xl font-bolg text-white border-b-2 border-[#A6DBFF] w-full py-4">
-							{`ATTRIBUTES  [${nft?.attributes.length}]`}
+							{`ATTRIBUTES  [${nft?.attributes?.length || 0}]`}
 						</h1>
 						<div className="flex flex-wrap w-full gap-2 pl-2">
-							{nft?.attributes.map((attribute, index) => (
+							{nft?.attributes?.map((attribute, index) => (
 								<AttributCard
 									type={attribute.type}
 									value={attribute.value}

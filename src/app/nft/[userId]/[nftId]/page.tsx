@@ -39,6 +39,9 @@ export default async function Page({
 	const nftId = (await params).nftId;
 
 	const asset = await fetchNftAsset(nftId);
-	if (!asset) return notFound();
+
+	if (!asset || !asset.publicKey || !asset.metadata) {
+		return notFound();
+	}
 	return <FetchNft userId={userId} nftId={nftId} asset={asset} />;
 }

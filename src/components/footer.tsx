@@ -5,11 +5,11 @@ const Footer = () => {
 		<footer className="w-full h-35 bg-[#1E262B] flex flex-col sm:flex-row justify-between items-center p-8 gap-6">
 			<div className="flex gap-8 h-full items-center">
 				<div>
-					<h3 className="text-2xl font-bold text-[#D4B844]">Ownify</h3>
+					<h3 className="text-2xl font-bold text-[#D4B844]">Twiftify</h3>
 				</div>
 				<p className="h-10 border-white border-[1px]" />
 				<p className="text-[#A6DBFF] text-sm font-semibold">
-					© 2024 Ownify. All rights reserved.
+					© 2024 Twiftify. All rights reserved.
 				</p>
 			</div>
 

@@ -44,7 +44,6 @@ const NftCard = ({
 				return toast.error("Login first to link your NFT");
 			}
 			const username = await getXUsername(user?.token);
-			console.log(username);
 
 			if (!username) {
 				return toast.error("Internal error, please try again");
@@ -63,7 +62,9 @@ const NftCard = ({
 				.rpc();
 
 			return toast.success("NFT linked to your X Username", {
-				description: "Transaction: " + tx,
+				description:
+					"You can see the transaction at: " +
+					`https://explorer.solana.com/tx/${tx}?cluster=devnet`,
 			});
 		} catch (error) {
 			console.error(error);

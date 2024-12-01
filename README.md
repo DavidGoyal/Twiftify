@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# **Twiftify**
 
-## Getting Started
+### Empower Your NFTs - Link, Showcase, Share
 
-First, run the development server:
+Twiftify is a fully decentralized platform that allows users to link their NFTs with their X (formerly Twitter) profiles. Showcase your digital assets with authenticity, gain visibility, and share them seamlessly with the world.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## **Program**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The Twiftify program is a custom smart contract on the Solana blockchain. It allows users to link their NFTs with their X (formerly Twitter) profiles.You can see the program deployed on the Solana blockchain [here](https://explorer.solana.com/address/5ZaqHHJ69BSEy9nVzvvdpPeKR6Zxy7Jp1ez6w2tasEhx?cluster=devnet).
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## **Features**
 
-## Learn More
+- **Decentralized Linking**:  
+  Link your NFTs to your X profile securely using blockchain-powered smart contracts.
+- **Secure & Transparent**:  
+  Enjoy trustless operations with no intermediaries. All links are recorded on the blockchain.
+- **Customizable Showcases**:  
+  Display your NFTs in style, complete with your X profile URL for easy sharing.
+- **User-Owned Data**:  
+  Maintain complete control over your data with no reliance on centralized servers.
+- **Futuristic Design**:  
+  A sleek UI with gradient hues of blue and purple to reflect the innovative nature of NFTs.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## **Getting Started**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### **Prerequisites**
 
-## Deploy on Vercel
+1. A solana wallet (e.g., Phantom, Backpack).
+2. NFTs on solana blockchain.
+3. An X (formerly Twitter) account.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### **Installation**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/DavidGoyal/twiftify.git
+   cd twiftify
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Create a .env file in the root directory and add your solana wallet's private key:
+   ```bash
+   NEXT_PUBLIC_PRIVATE_KEY=your_private_key
+   AUTH_SECRET=
+   AUTH_TWITTER_ID=
+   AUTH_TWITTER_SECRET=
+   NEXTAUTH_URL=
+   NEXT_PUBLIC_RPC_URL=
+   NEXT_PUBLIC_DEVNET_URL=
+   ```
+4. Run the development server:
+   ```bash
+   npm run dev
+   ```
+
+## **Usage**
+
+1. Navigate to the website: http://localhost:3000
+2. Connect your wallet to the website.
+3. Click on the "Connect Wallet" button to connect your wallet.
+4. Click on the "Link" button to link your NFTs with your X profile.
+5. Click on the "View" button to see your NFT.
+6. Click on the "Share" button to share your NFTs with the world.
+
+## **Contributing**
+
+If you'd like to contribute to the development of the Twiftify, feel free to fork the repository and submit a pull request. Any contributions are welcome!

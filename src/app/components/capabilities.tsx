@@ -5,38 +5,38 @@ const Capabilites = () => {
 	return (
 		<section className="w-full flex flex-col lg:flex-row justify-between items-center p-8 mt-12 gap-8">
 			<p className="text-white text-6xl font-bold uppercase w-[90%] lg:w-[40%] text-center text-wrap">
-				Ownify&apos;s Capabilites
+				Twiftify&apos;s Capabilites
 			</p>
 
 			<div className="flex flex-col gap-4 w-[90%] lg:w-[50%]">
 				<CapabilitesCard
-					title="Effortless Integration with Your Accounts"
+					title="Effortless And Safe Integration with Your X Account"
 					icon={
 						<Image src={"/pencil.png"} alt="pencil" width={50} height={50} />
 					}
 					iconBgColor="#FF68D9"
-					description="Quickly link your NFTs to your social or crypto accounts for better visibility and sharing. Whether it's your Twitter, Instagram, or wallet, we make it easy to connect and showcase your assets to the world."
+					description="Twiftify operates on a completely decentralized platform, powered by a custom smart contract. Your NFTs are linked to your X profile without relying on centralized systems, ensuring security and transparency."
 				/>
 				<CapabilitesCard
-					title="Create Custom NFT Cards Instantly"
+					title="Gain More Visibility"
 					icon={<Image src={"/cow.png"} alt="cow" width={50} height={50} />}
 					iconBgColor="#40B651"
-					description="Transform your NFTs into beautifully designed digital cards with a single click. Personalize each card to reflect your unique style, and share them across social media or within your network."
+					description="Amplify your reach by integrating NFTs with your X profile. Twiftify helps you connect with a broader audience by combining social presence with blockchain creativity."
 					alignLeft={false}
 				/>
 				<CapabilitesCard
-					title="Connect Your Wallet Securely"
+					title="Blockchain-Powered Authenticity"
 					icon={
 						<Image src={"/wallet.png"} alt="wallet" width={50} height={50} />
 					}
 					iconBgColor="#689DFF"
-					description="Ownify supports secure wallet connections with top-tier protection. Link your wallet to access your NFTs in a safe, user-friendly environment without worrying about security risks."
+					description="Every link between an NFT and an X profile is managed by a smart contract, guaranteeing authenticity, immutability, and complete user control over the data."
 				/>
 				<CapabilitesCard
 					title="Keep Track of Your Entire NFT Collection"
 					icon={<Image src={"/nft.png"} alt="nft" width={50} height={50} />}
 					iconBgColor="#B6406B"
-					description="Manage and display all your NFTs in one place. Whether you own one or a hundred, Ownify helps you organize and showcase them easily with a clean, intuitive dashboard."
+					description="Creators and collectors can easily connect through Twiftify. Display your NFTs and attract like-minded individuals for collaborations, trades, or sales."
 					alignLeft={false}
 				/>
 			</div>
@@ -64,7 +64,10 @@ const CapabilitesCard = ({
 			}`}
 		>
 			<div
-				className={`flex items-center justify-center h-fit p-2 rounded-lg bg-[${iconBgColor}]`}
+				className={`flex items-center justify-center h-fit p-2 rounded-lg`}
+				style={{
+					backgroundColor: iconBgColor,
+				}}
 			>
 				{icon}
 			</div>

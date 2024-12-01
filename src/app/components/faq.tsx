@@ -15,7 +15,7 @@ const Faq = () => {
 					<br /> We got you.
 				</h3>
 				<p className="text-sm text-white font-semibold">
-					Have questions? No worries! At Ownify, we&apos;re here to help.
+					Have questions? No worries! At Twiftify, we&apos;re here to help.
 					Whether you&apos;re new to NFTs or an expert, our support team is
 					ready to assist you. Reach out anytime, and we&apos;ll ensure your
 					experience is smooth and easy!
@@ -28,42 +28,63 @@ const Faq = () => {
 			>
 				<AccordionItem value="item-1" className="border-[#A6DBFF]">
 					<AccordionTrigger className="font-semibold">
-						What is Ownify?
+						What is Twiftify?
 					</AccordionTrigger>
 					<AccordionContent>
-						Yes. It adheres to the WAI-ARIA design pattern.
+						Twiftify is a fully decentralized platform that allows you to link
+						your NFTs with your X (formerly Twitter) profile. It uses blockchain
+						technology and smart contracts to ensure secure, authentic, and
+						tamper-proof connections.
 					</AccordionContent>
 				</AccordionItem>
 				<AccordionItem value="item-2" className="border-[#A6DBFF]">
 					<AccordionTrigger className="font-semibold">
-						What is Ownify?
+						How does Twiftify work?
 					</AccordionTrigger>
 					<AccordionContent>
-						Yes. It adheres to the WAI-ARIA design pattern.
+						Twiftify uses a custom smart program on the blockchain to link your
+						NFTs to your X profile. Once linked, your NFTs can display your X
+						profile URL, allowing you to share them with your audience easily
+						and securely.
 					</AccordionContent>
 				</AccordionItem>
 				<AccordionItem value="item-3" className="border-[#A6DBFF]">
 					<AccordionTrigger className="font-semibold">
-						What is Ownify?
+						Is Twiftify centralized?
 					</AccordionTrigger>
 					<AccordionContent>
-						Yes. It adheres to the WAI-ARIA design pattern.
+						No, Twiftify is entirely decentralized. All operations, including
+						NFT linking, are handled through blockchain-based smart contracts,
+						ensuring full transparency and user control.
 					</AccordionContent>
 				</AccordionItem>
 				<AccordionItem value="item-4" className="border-[#A6DBFF]">
 					<AccordionTrigger className="font-semibold">
-						What is Ownify?
+						Do I need a wallet to use Twiftify?
 					</AccordionTrigger>
 					<AccordionContent>
-						Yes. It adheres to the WAI-ARIA design pattern.
+						Yes, you need a solana wallet to interact with Twiftify. This wallet
+						will be used to sign transactions and link your NFTs to your X
+						profile securely.
 					</AccordionContent>
 				</AccordionItem>
 				<AccordionItem value="item-5" className="border-[#A6DBFF]">
 					<AccordionTrigger className="font-semibold">
-						What is Ownify?
+						Are there any fees for using Twiftify?
 					</AccordionTrigger>
 					<AccordionContent>
-						Yes. It adheres to the WAI-ARIA design pattern.
+						There might be minimal blockchain gas fees associated with the smart
+						contract interactions, but Twiftify itself does not charge any
+						additional platform fees.
+					</AccordionContent>
+				</AccordionItem>
+				<AccordionItem value="item-6" className="border-[#A6DBFF]">
+					<AccordionTrigger className="font-semibold">
+						Is Twiftify open source?
+					</AccordionTrigger>
+					<AccordionContent>
+						The smart contract powering Twiftify is fully auditable, and parts
+						of the platform are open source, ensuring transparency and trust.
 					</AccordionContent>
 				</AccordionItem>
 			</Accordion>

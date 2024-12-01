@@ -14,17 +14,18 @@ const Hero = () => {
 				/>
 				<div className="flex flex-col w-[90%] md:w-[35%]">
 					<div className="flex flex-col">
-						<h1 className="text-4xl font-bold text-[#D4B844]">Ownify</h1>
+						<h1 className="text-4xl font-bold text-[#D4B844]">Twiftify</h1>
 						<h2 className="text-2xl font-bold text-white">
 							Empower Your NFTs - Link,
 							<br /> Showcase, Share.
 						</h2>
 					</div>
 					<p className="text-[#D4B844] text-sm font-semibold">
-						A sleek, futuristic background with gradient hues of blue and
-						purple, accented by abstract shapes or subtle digital patterns. This
-						design evokes innovation and creativity, aligning perfectly with the
-						cutting-edge and artistic nature of NFTs.
+						A seamless way to link your NFTs with your X (formerly Twitter)
+						profile. Share your creations effortlessly with your profile URL
+						attached, ensuring credit and visibility for your work. The
+						platform&apos;s sleek, futuristic design reflects innovation and the
+						creative spirit of the NFT space.
 					</p>
 				</div>
 			</div>

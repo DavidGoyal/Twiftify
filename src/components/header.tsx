@@ -3,6 +3,9 @@ import React from "react";
 import { signIn, signOut } from "@/auth";
 import { auth } from "../auth";
 import WalletButton from "./ui/wallet-button";
+import Image from "next/image";
+import img from "../app/favicon.ico";
+import HeaderButton from "./ui/header-button";
 
 const Header = async () => {
 	async function twitterSignIn() {
@@ -19,13 +22,18 @@ const Header = async () => {
 
 	return (
 		<header className="w-full h-[6rem] flex justify-between items-center p-8 pb-2 border-b-[1px] border-[#2a2f34]">
-			<div>
-				<Link href={"/"}>
-					<h3 className="text-2xl font-bold text-[#D4B844]">Ownify</h3>
-				</Link>
-			</div>
+			<Link href={"/"} className="flex gap-2 items-center">
+				<Image
+					src={img}
+					width={40}
+					height={40}
+					alt={""}
+					className="rounded-full"
+				/>
+				<h3 className="text-2xl font-bold text-[#D4B844]">Twiftify</h3>
+			</Link>
 
-			<nav className="flex gap-6">
+			<nav className="hidden gap-6 sm:flex">
 				<Link href={"/"} className="text-white">
 					Home
 				</Link>
@@ -34,7 +42,7 @@ const Header = async () => {
 				</Link>
 			</nav>
 
-			<div className="flex gap-4">
+			<div className="hidden gap-4 sm:flex">
 				{session?.user ? (
 					<button
 						className="bg-[#D4B844] text-white font-semibold px-4 py-2 rounded-xl"
@@ -52,6 +60,12 @@ const Header = async () => {
 				)}
 				<WalletButton />
 			</div>
+
+			<HeaderButton
+				isLoggedIn={session?.user ? true : false}
+				twitterSignIn={twitterSignIn}
+				twittersignOut={twittersignOut}
+			/>
 		</header>
 	);
 };
