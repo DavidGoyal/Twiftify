@@ -1,5 +1,6 @@
 "use client";
 
+import { getXUsername } from "@/actions/getXUsername";
 import { programConnection, storeAccount } from "@/anchor/anchor-client";
 import {
 	Tooltip,
@@ -10,7 +11,6 @@ import {
 import { NFTMetadata } from "@/types/types";
 import { AnchorProvider, Program, setProvider } from "@coral-xyz/anchor";
 import { useAnchorWallet } from "@solana/wallet-adapter-react";
-import axios from "axios";
 import { User } from "next-auth";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
@@ -40,21 +40,13 @@ const NftCard = ({
 	const linkNftToXUsername = async () => {
 		setLoading(true);
 		try {
-			if (!user) {
+			if (!user || !user.token) {
 				return toast.error("Login first to link your NFT");
 			}
-			const response = await axios.get(
-				"https://api.x.com/2/users/me?query=from:twitterdev",
-				{
-					headers: {
-						Authorization: `Bearer ${user?.token}`,
-						"User-Agent": "v2UserLookupJS",
-					},
-				}
-			);
-			console.log(response?.data?.username);
+			const username = await getXUsername(user?.token);
+			console.log(username);
 
-			if (!response?.data?.username) {
+			if (!username) {
 				return toast.error("Internal error, please try again");
 			}
 
@@ -63,10 +55,7 @@ const NftCard = ({
 			const program = new Program(idl as SolanaStore, provider);
 
 			const tx = await program.methods
-				.setValue(
-					wallet.publicKey.toString() + nft.publicKey,
-					response?.data?.username
-				)
+				.setValue(wallet.publicKey.toString() + nft.publicKey, username)
 				.accounts({
 					storeAccount: storeAccount,
 					user: wallet.publicKey,
