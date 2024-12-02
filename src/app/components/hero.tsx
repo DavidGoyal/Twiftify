@@ -3,7 +3,7 @@ import React from "react";
 
 const Hero = () => {
 	return (
-		<article className="w-full h-[calc(90vh-6rem)] p-8">
+		<article className="w-full h-[90vh] sm:h-[calc(90vh-6rem)] p-8">
 			<div className="w-full h-full flex flex-col md:flex-row justify-center items-center gap-12 bg-[url('/HeroBG.png')] bg-no-repeat bg-cover bg-center rounded-3xl">
 				<Image
 					src={"/Solana.png"}
@@ -22,10 +22,10 @@ const Hero = () => {
 					</div>
 					<p className="text-[#D4B844] text-sm font-semibold">
 						A seamless way to link your NFTs with your X (formerly Twitter)
-						profile. Share your creations effortlessly with your profile URL
-						attached, ensuring credit and visibility for your work. The
-						platform&apos;s sleek, futuristic design reflects innovation and the
-						creative spirit of the NFT space.
+						profile. Share your nft holdings effortlessly with your profile URL
+						attached, ensuring visibility for your holdings. The platform&apos;s
+						sleek, futuristic design reflects innovation and the creative spirit
+						of the NFT space.
 					</p>
 				</div>
 			</div>

@@ -110,7 +110,7 @@ const FetchNft = ({
 				</h1>
 				<ShareComponent
 					url={window.location.href}
-					title={`Checkout my nft ${nft?.name}`}
+					title={`Hey guys check out my new nft holding ${nft?.name}`}
 				/>
 			</div>
 			<main className="w-full min-h-[80vh] flex flex-col lg:flex-row justify-between p-8 lg:p-12 lg:px-24 pt-0 lg:pt-0">

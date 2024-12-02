@@ -85,6 +85,14 @@ const Faq = () => {
 					<AccordionContent>
 						The smart contract powering Twiftify is fully auditable, and parts
 						of the platform are open source, ensuring transparency and trust.
+						You can view it at{" "}
+						<a
+							href="https://github.com/DavidGoyal/twiftify"
+							className="text-blue-500 underline"
+						>
+							Twiftify
+						</a>
+						.
 					</AccordionContent>
 				</AccordionItem>
 			</Accordion>
